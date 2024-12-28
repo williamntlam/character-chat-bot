@@ -1,3 +1,150 @@
-env
+# Node.js
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Frontend build
+build/
+dist/
+.next/
+.out-tsc
+/bazel-out
+
+# Static files
+generated/
+*.local
+
+# Environment variables
 .env
-node_modules
+.env.*
+
+# Cache files
+.cache/
+
+# Editor directories and files
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+*.eggs/
+.Python
+
+# Virtual environment
+venv/
+.venv/
+
+# Database files
+*.sqlite3
+*.db
+
+# Alembic migrations
+alembic/versions/*.pyc
+
+# Docker
+*.env
+Dockerfile
+*.env.*
+
+# Logs and temp files
+*.log
+tmp/
+*.bak
+libpeerconnection.log
+testem.log
+
+# Python test and coverage
+.pytest_cache/
+coverage/
+*.cover
+*.coverage
+
+# Django/Flask
+*.log
+*.pyc
+.DS_Store
+*.pyo
+migrations/
+
+# FastAPI logs
+fastapi_logs/
+
+# Compiled output
+/tmp
+/angular/cache
+.sass-cache
+
+# Angular temporary files
+.angular/
+
+# Angular build output
+out-tsc/
+
+# IDE and editor files
+.idea/
+.vscode/
+.project
+.classpath
+
+# Coverage directory for testing
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Compiled JavaScript and TypeScript
+*.js
+*.d.ts
+*.js.map
+*.tsbuildinfo
+
+# Generated files for library builds
+*.tgz
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Specific dependency cache
+.npm/
+.npm_cache/
+
+# Temporary Angular-specific files
+.vite/
+vite.config.ts
+
+# Optional npm cache directory
+.npm_cache/
+
+# IDE test results
+*.iml
+*.test-results
+
+# Miscellaneous
+!.gitkeep

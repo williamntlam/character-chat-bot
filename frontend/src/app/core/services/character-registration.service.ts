@@ -6,12 +6,7 @@ import {
   CharacterData,
 } from '../../shared/interfaces/interfaces';
 
-function transformCharacterData(data: RawCharacterData): CharacterData {
-  return {
-    characterName: data['character-name'],
-    characterDescription: data['character-description'],
-  };
-}
+import { transformCharacterData } from '../../shared/helpers/interfaceHelpers';
 
 @Injectable({
   providedIn: 'root',
@@ -26,9 +21,8 @@ export class CharacterRegistrationService {
       'Content-Type': 'application/json',
     });
 
-    const processedCharacterValues = transformCharacterData(characterData);
-
-    console.log(processedCharacterValues);
+    const processedCharacterValues: CharacterData =
+      transformCharacterData(characterData);
 
     return this.http.post(this.apiUrl, processedCharacterValues, { headers });
   };

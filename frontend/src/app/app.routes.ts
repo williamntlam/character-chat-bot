@@ -11,7 +11,6 @@ export const routes: Routes = [
   {
     path: 'character',
     component: CharacterProfileComponent,
-    canActivate: [authGuard],
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

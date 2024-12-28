@@ -8,6 +8,8 @@ import { ChatLayoutComponent } from '../chat-layout/chat-layout.component';
 import { Router } from '@angular/router';
 import { authGuard } from '../../core/guards/auth.guard';
 
+import { camelCase } from 'lodash';
+
 const routes: Routes = [
   { path: 'chat', component: ChatLayoutComponent, canActivate: [authGuard] },
 ];

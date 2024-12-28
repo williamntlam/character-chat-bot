@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-interface CharacterData {
-  characterName: string;
-  characterDescription: string;
+import {
+  RawCharacterData,
+  CharacterData,
+} from '../../shared/interfaces/interfaces';
+
+function transformCharacterData(data: RawCharacterData): CharacterData {
+  return {
+    characterName: data['character-name'],
+    characterDescription: data['character-description'],
+  };
 }
 
 @Injectable({
@@ -14,11 +21,15 @@ export class CharacterRegistrationService {
 
   private apiUrl = 'http://localhost:5000/character';
 
-  registerCharacter = (characterData: CharacterData) => {
+  registerCharacter = (characterData: RawCharacterData) => {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
 
-    return this.http.post(this.apiUrl, characterData, { headers });
+    const processedCharacterValues = transformCharacterData(characterData);
+
+    console.log(processedCharacterValues);
+
+    return this.http.post(this.apiUrl, processedCharacterValues, { headers });
   };
 }

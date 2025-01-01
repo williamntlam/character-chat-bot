@@ -17,7 +17,7 @@ Welcome to the Character Chat Bot project! This application enables users to int
 
 ### Frontend:
 - **Framework**: Angular
-- **Styling**: Tailwind CSS (optional, if used)
+- **Styling**: Tailwind CSS
 - **State Management**: NgRx (if applicable)
 
 ### Backend:
